@@ -1,39 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Password Protected Page</title>
-    <link rel="stylesheet" href="style.css">
-</head><body>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sound Selector</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: black;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
 
-    <div class="container">
-        <!-- Login form remains the same -->
-        <div id="login-container">
-            <h1>Enter Spell to Reveal Clue</h1>
-            <input type="password" id="password-input" placeholder="Password">
-            
-            <div class="show-password-container">
-                <input type="checkbox" id="show-password" onclick="togglePasswordVisibility()">
-                <label for="show-password">Show Password</label>
-            </div>
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+    }
 
-            <button onclick="checkPassword()">Submit</button>
-            <!-- The old error message and wrong-image-container are no longer needed here -->
-        </div>
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 80%;
+      max-width: 300px;
+    }
 
-        <!-- 
-          START: MODIFIED THIS SECTION
-          This is now a generic result page that will be populated by JavaScript.
-        -->
-        <div id="content-container" style="display: none;">
-            <h1 id="result-heading"></h1> <!-- The heading text will be set by JS -->
-            <h2 id="result-summary"></h2> <!-- The heading text will be set by JS -->
-            <img id="result-image" src="" alt="Result Image" class="result-image"> <!-- The image source will be set by JS -->
-        </div>
-        <!-- END: MODIFIED THIS SECTION -->
-    </div>
+    a.sound-link {
+      display: block;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 1rem;
+      border-radius: 10px;
+      text-decoration: none;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: 600;
+      transition: background 0.3s, transform 0.2s;
+    }
 
-    <script src="script.js"></script>
+    a.sound-link:hover {
+      background: rgba(255, 255, 255, 0.35);
+      transform: scale(1.05);
+    }
+
+    footer {
+      position: absolute;
+      bottom: 10px;
+      font-size: 0.8rem;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎧 Choose a Sound</h1>
+
+  <div class="links">
+    <a href="sound1.html" class="sound-link">Sound 1</a>
+    <a href="sound2.html" class="sound-link">Sound 2</a>
+    <a href="sound3.html" class="sound-link">Sound 3</a>
+    <a href="sound4.html" class="sound-link">Sound 4</a>
+  </div>
+
+  <footer>© 2025 My Audio Page</footer>
 </body>
 </html>
