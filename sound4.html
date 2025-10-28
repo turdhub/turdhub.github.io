@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sound 1</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background: black;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    audio {
+      width: 90%;
+      max-width: 400px;
+      margin-top: 1rem;
+    }
+
+    #message {
+      margin-top: 2rem;
+      font-size: 1.2rem;
+      opacity: 0;
+      transition: opacity 1s ease;
+    }
+
+    a {
+      color: white;
+      text-decoration: underline;
+      margin-top: 2rem;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <h1> JUMPSCARE </h1>
+  <audio id="audio" controls autoplay>
+    <source src="karma.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div id="message">Wrong Track, Try Again</div>
+
+  <script>
+    const audio = document.getElementById("audio");
+    const message = document.getElementById("message");
+    let timerStarted = false;
+
+    audio.addEventListener("play", () => {
+      if (!timerStarted) {
+        timerStarted = true;
+        setTimeout(() => {
+          message.style.opacity = 1;
+        }, 3000); // show text after 5 seconds
+      }
+    });
+  </script>
+</body>
+</html>
