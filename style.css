@@ -18,9 +18,15 @@ body {
     max-width: 400px;
 }
 
-h1, h2 {
+h1 {
     color: #f1f1f1; /* Light headings */
     margin-bottom: 20px;
+}
+
+h2 {
+    color: #f1f1f1; /* Light headings */
+    margin-bottom: 20px;
+    font-style: italic;
 }
 
 p {
