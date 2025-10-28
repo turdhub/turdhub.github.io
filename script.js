@@ -3,7 +3,7 @@ function checkPassword() {
     const correctPassword = "puellula";
     const correctImage = "clue.png"; // Filename for the correct image
     const correctHeading = "Your clue"
-    const correctSummary = "Three cursed relics from the Book of Faces written by the Red Witch - their name erased, but their chaos remains.";
+    const correctSummary = "Three cursed relics written by the Red Witch in the Book of Faces - their name erased, but their chaos remains.";
 
     const wrongImage = "jumpscare.png"; // Filename for the wrong image
     const wrongHeading = "Access Denied";
