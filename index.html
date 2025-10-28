@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Protected Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div id="login-container">
+            <h1>Enter Spell to Reveal Clue</h1>
+            <input type="password" id="password-input" placeholder="Password">
+            
+            <!-- START: ADDED THIS SECTION -->
+            <div class="show-password-container">
+                <input type="checkbox" id="show-password" onclick="togglePasswordVisibility()">
+                <label for="show-password">Show Password</label>
+            </div>
+            <!-- END: ADDED THIS SECTION -->
+
+            <button onclick="checkPassword()">Submit</button>
+            <p id="error-message"></p>
+        </div>
+
+        <div id="content-container" style="display: none;">
+            <h2>Success! Here is your clue.</h2>
+            <img src="clue.png">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
